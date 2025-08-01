@@ -34,9 +34,7 @@
       margin: 10px 0 20px 0;
     }
     .upi-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: block;
       background: #007bff;
       color: #fff;
       padding: 12px;
@@ -44,11 +42,6 @@
       text-decoration: none;
       border-radius: 5px;
       font-weight: bold;
-    }
-    .upi-btn img {
-      height: 24px;
-      width: 24px;
-      margin-right: 10px;
     }
     .upi-btn:hover {
       background: #0056b3;
@@ -76,11 +69,6 @@
       font-size: 0.9em;
       color: #666;
     }
-    .secure-note img {
-      height: 20px;
-      vertical-align: middle;
-      margin-right: 5px;
-    }
   </style>
 </head>
 <body>
@@ -90,20 +78,9 @@
     <h1>Chakgaria East Sammilani Park Welfare</h1>
     <p class="amount">Durga Puja 2025 Subscription: ₹3,000</p>
 
+    <!-- Single UPI Link that works across Chrome, Safari, Android, iOS -->
     <a class="upi-btn" href="upi://pay?pa=getepay.mbandhan90760@icici&pn=Chakgaria%20East%20Sammilani%20Welfare%20Association&am=3000&cu=INR">
-      <img src="logo/upi.png" alt="UPI">Pay with Default UPI App
-    </a>
-
-    <a class="upi-btn" href="intent://pay?pa=getepay.mbandhan90760@icici&pn=Chakgaria%20East%20Sammilani%20Welfare%20Association&am=3000&cu=INR#Intent;scheme=upi;package=com.phonepe.app;end">
-      <img src="logo/phonepe.png" alt="PhonePe">Pay with PhonePe
-    </a>
-
-    <a class="upi-btn" href="intent://pay?pa=getepay.mbandhan90760@icici&pn=Chakgaria%20East%20Sammilani%20Welfare%20Association&am=3000&cu=INR#Intent;scheme=upi;package=com.google.android.apps.nbu.paisa.user;end">
-      <img src="logo/gpay.png" alt="Google Pay">Pay with Google Pay
-    </a>
-
-    <a class="upi-btn" href="intent://pay?pa=getepay.mbandhan90760@icici&pn=Chakgaria%20East%20Sammilani%20Welfare%20Association&am=3000&cu=INR#Intent;scheme=upi;package=net.one97.paytm;end">
-      <img src="logo/paytm.png" alt="Paytm">Pay with Paytm
+      Pay Now via UPI App
     </a>
 
     <div class="vpa-section">
@@ -114,7 +91,7 @@
     </div>
 
     <p class="secure-note">
-      <img src="logo/secure.png" alt="Secure"> Your payment is secured by UPI protocols.
+      🔒 Your payment is secured via UPI on your trusted app.
     </p>
   </div>
 
