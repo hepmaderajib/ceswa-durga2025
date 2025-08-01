@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chakgaria East Sammilani Welfare Association - Durga Puja 2025 Payment</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    img.logo {
+      width: 100px;
+      margin-bottom: 15px;
+    }
+    h1 {
+      font-size: 1.5em;
+      color: #333;
+    }
+    .amount {
+      font-size: 1.2em;
+      color: #222;
+      margin: 10px 0 20px 0;
+    }
+    .upi-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #007bff;
+      color: #fff;
+      padding: 12px;
+      margin: 10px 0;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .upi-btn img {
+      height: 24px;
+      width: 24px;
+      margin-right: 10px;
+    }
+    .upi-btn:hover {
+      background: #0056b3;
+    }
+    .vpa-section {
+      margin-top: 30px;
+    }
+    input[type="text"] {
+      padding: 10px;
+      width: 80%;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button.custom-pay {
+      padding: 10px 20px;
+      background: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .secure-note {
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: #666;
+    }
+    .secure-note img {
+      height: 20px;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img class="logo" src="logo/association_logo.png" alt="Chakgaria East Sammilani Park Logo" />
+    <h1>Chakgaria East Sammilani Park Welfare</h1>
+    <p class="amount">Durga Puja 2025 Subscription: ₹3,000</p>
+
+    <a class="upi-btn" href="upi://pay?pa=getepay.mbandhan90760@icici&pn=Chakgaria%20East%20Sammilani%20Welfare%20Association&am=3000&cu=INR">
+      <img src="logo/upi.png" alt="UPI">Pay with Default UPI App
+    </a>
+
+    <a class="upi-btn" href="intent://pay?pa=getepay.mbandhan90760@icici&pn=Chakgaria%20East%20Sammilani%20Welfare%20Association&am=3000&cu=INR#Intent;scheme=upi;package=com.phonepe.app;end">
+      <img src="logo/phonepe.png" alt="PhonePe">Pay with PhonePe
+    </a>
+
+    <a class="upi-btn" href="intent://pay?pa=getepay.mbandhan90760@icici&pn=Chakgaria%20East%20Sammilani%20Welfare%20Association&am=3000&cu=INR#Intent;scheme=upi;package=com.google.android.apps.nbu.paisa.user;end">
+      <img src="logo/gpay.png" alt="Google Pay">Pay with Google Pay
+    </a>
+
+    <a class="upi-btn" href="intent://pay?pa=getepay.mbandhan90760@icici&pn=Chakgaria%20East%20Sammilani%20Welfare%20Association&am=3000&cu=INR#Intent;scheme=upi;package=net.one97.paytm;end">
+      <img src="logo/paytm.png" alt="Paytm">Pay with Paytm
+    </a>
+
+    <div class="vpa-section">
+      <h3>Or Pay to a Different VPA</h3>
+      <input type="text" id="vpaInput" placeholder="Enter UPI ID (e.g., yourname@upi)" />
+      <br/>
+      <button class="custom-pay" onclick="payCustom()">Pay Now</button>
+    </div>
+
+    <p class="secure-note">
+      <img src="logo/secure.png" alt="Secure"> Your payment is secured by UPI protocols.
+    </p>
+  </div>
+
+  <script>
+    function payCustom() {
+      const vpa = document.getElementById("vpaInput").value.trim();
+      if (vpa === "") {
+        alert("Please enter a valid UPI ID.");
+        return;
+      }
+      const name = "Chakgaria East Sammilani Welfare Association";
+      const amount = 3000;
+      const url = `upi://pay?pa=${encodeURIComponent(vpa)}&pn=${encodeURIComponent(name)}&am=${amount}&cu=INR`;
+      window.location.href = url;
+    }
+  </script>
+
+</body>
+</html>
